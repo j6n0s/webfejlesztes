@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Deskó Zoltán">
+<meta name="copyright" content="Oktatási célokra">
+<meta name="description" content="New Yorki utazási iroda">
+<link rel="apple-touch-icon" sizes="180x180" href="kepek/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="kepek/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="kepek/favicon/favicon-16x16.png">
+<link rel="shortcut icon" href="kepek/favicon/favicon.ico" type="image/x-icon">
+<title>New York</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="fej_con">
+<a href="index.html">
+<div class="keret">
+    <img src="kepek/szabsz.jpg" alt="Szabadságszobor">
+    <h1 class="fej_h1">New York</h1>
+</div>
+</a>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="Tortenelem.html">Történelem</a></li>
+        <li><a href="#" id="current">GY.I.K.</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+    </ul>
+</nav>
+<hr>
+<article class="gyik">
+    <h2 class="kivetel">Itt megtalálhatja a gyakran ismétlődő kérdéseket:</h2>
+    <h3 class="kivetel">Mi lenne a kérdése?</h3>
+    <select id="kerdesek">
+        <option value="valasztas">--Válassz!--</option>
+        <option value="biztositas">Milyen biztosítást érdemes fontolóra venni?</option>
+        <option value="lemondas">Hogyan működik az utazás lemondása?</option>
+        <option value="eleres">Mikor lehet elérni az utazási irodát?</option>
+        <option value="v_csomag">Milyen csomagot válasszak?</option>
+    </select>
+    <input type="button" value="Betöltés" id="betoltes" onClick="betolt()">
+    <section id="valasz_k">
+        <h2 class="kivetel">---</h2>
+        <p id="valasz">???</p>
+    </section>
+</article>
+<hr>
+<footer>
+    <p>Nem egy valós utazási iroda. Az oldal tanulmányi célú</p>
+    <p>Deskó Zoltán © 2023 Corvinus</p>
+</footer>
+<script src="JS/kerdesek_script.js"></script>
+</body>
+</HTML>

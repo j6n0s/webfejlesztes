@@ -1,0 +1,13 @@
+Oldal készítőjének neve: Deskó Zoltán;
+URL: 
+
+A weboldal egy fiktív utazási irodát reprezentál, amelynek a neve New York utazási iroda. Az iroda utazásokat és élményprogramokat kínál, New York városában. 
+
+JavaScript: 
+Kettő darab javascript van használatban.
+Az egyik a GY.I.K. oldalon a kerdesek_script.js, arra szolgál, hogy egy <select>-ből lenyíló kérdésre betöltéskor választ ad az oldalon;
+A másik a Shop oldalon a shop_script.js, ez egy számítás elvégzésére szolgál, személyek számának, illetve a csomag opciók árának szorzatát adja vissza.
+
+Google fonts:
+Név: DM Serif Display;
+HEADER-ben használatos, ezzel van megjelenítve a New York felirat.

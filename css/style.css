@@ -1,0 +1,326 @@
+/*HTML - rész*/
+* {
+    box-sizing: border-box;
+}
+
+html{
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Cambria, Cochin, serif;
+}
+
+/*Fejléc*/
+header.fej_con{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.fej_h1{
+    display: flex;
+    position: absolute;
+    color: #354f52;
+    font-family: DM Serif Display, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    background-color: #faedcd;
+    border-radius: 20% 0 20% 0;
+    
+}
+
+h1.fej_h1 a{
+    text-decoration: none;
+}
+
+h1.fej_h1 a:visited, a:active{
+    text-decoration: none;
+    color: #354f52;
+}
+
+
+.keret{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1% ;
+    border: 2px solid black;
+}
+
+/*Menü*/
+nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+nav ul li{
+    padding: 10px 30px;
+    text-align: center;
+}
+nav li a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 22px;
+}
+
+nav li a#current {
+    border: 1px solid black;
+    border-radius: 0 20% 0 20%;
+}
+
+nav li a:hover, nav li a#current:hover {
+    color: white;
+    background-color: #52796f;
+    border-radius: 20% 0 20% 0;
+}
+
+/*Egész*/
+article{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    flex-direction: column;
+    padding: 50px 70px;
+    font-size: 22px;
+}
+
+hr{
+    margin: 0;
+}
+
+p{
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4{
+    text-align: left;
+}
+
+/*Általában h1, h2, h3, h4 kivetelei*/
+.kivetel{
+    text-align: center;
+}
+
+/*input hossz általában*/
+.hossz_n{
+    width: 220px;
+}
+
+/*input hossz általában*/
+.hossz_k{
+    width: 50px;
+}
+
+/*Rólunk rész*/
+article.rolunk figure{
+    display: flex;
+    align-self: center; 
+}
+
+img.rolunk{
+    width: 350px;
+    border-radius: 10%;
+}
+
+span#bold{
+    font-weight: bold;
+}
+
+/*Kínálat*/
+article.kinalat figure{
+    display: flex;
+    align-self: center; 
+}
+
+img.kinalat{
+    width: 300px;
+    border-radius: 10%;
+}
+
+/*Kínálat képek*/
+article.ny_kepek{
+    align-items: center;
+    text-align: center;
+}
+
+article.ny_kepek img{
+    width: 350px;
+    border-radius: 10%;
+}
+
+/*Kép nagyítás*/
+img.nagyitas:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+/*Történelem térkép - Kép - h1*/
+figure.kezdo_kep{
+    padding-top: 50px 0;
+    text-align: center;
+}
+img.kezdo_kep{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+article.ny_kepek h2#kivetel{
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+/*GY.I.K*/
+article.gyik{
+    align-items: center;
+}
+
+section#valasz_k{
+    align-self: center;
+}
+
+select#kerdesek{
+    width: 300px;
+}
+
+input#betoltes{
+    width: 300px;
+}
+
+/*Csomag lehetőségek*/
+#valasztasok{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    flex-direction: column;
+    text-align: center;
+}
+/*Szolgaltatas keret*/
+#sz_cs_eredmeny{
+    background-color: #f8f9fa;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    padding: 30px 10px;
+}
+
+
+/*Shop*/
+article.shop{
+    display: block;
+    text-align: center;
+}
+
+div#elerhet{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    max-width: 500px;
+}
+
+div#rendeles{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    max-width: 700px;
+}
+
+/*Csomagok*/
+div#csomagok{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.cs_keret{
+    margin: 10px;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #edede9;
+    width: 150px;
+    height: 250px;
+    text-align: center;
+    padding: 0 2px;
+}
+
+div#csomagok p.cs_p{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+div#leadas{
+    margin-top: 30px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    max-width: 500px;
+}
+
+/*Lábrész*/
+footer{
+    text-align:center;
+    padding: 10px;
+}
+
+/* Reszponzivítás */
+/*tablet*/
+@media all and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    article.ny_kepek{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    div#csomagok{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+}
+
+/*Számítógép*/
+@media all and (min-width: 768px) {
+    article{
+        flex-direction: row;
+    }
+
+    article.gyik{
+        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    div#csomagok{
+        justify-content: space-around;
+    }
+}

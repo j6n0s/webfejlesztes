@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Deskó Zoltán">
+<meta name="copyright" content="Oktatási célokra">
+<meta name="description" content="New Yorki utazási iroda">
+<link rel="apple-touch-icon" sizes="180x180" href="kepek/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="kepek/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="kepek/favicon/favicon-16x16.png">
+<link rel="shortcut icon" href="kepek/favicon/favicon.ico" type="image/x-icon">
+<title>New York</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+<script src="JS/jquery-3.7.1.js"></script>
+<script src="JS/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#MyForm").validate({ 
+        rules: {
+            szam_vez_nev: "required",
+            szam_k_nev: "required",
+            szam_email: {
+                required: true,
+                email: true
+            },
+            szam_cim: "required",
+            szam_ir: "required",
+            feltetelek: "required",
+            vez_nev: "required",
+            k_nev: "required",
+            utazok:{
+                required: true,
+                min: 1,
+                max: 5
+            },
+            eletkor:{
+                required: true,
+                min: 18
+            },
+            email:{
+                required: true,
+                email: true
+            },
+            csomag: "required",
+            indulas_d: "required",
+            vissza_d: "required",
+            ejgy: "required",
+            kuponkod:{
+                minlength: 8
+            }
+        },
+        messages: {
+            szam_vez_nev: "<br>Kérlek add meg a vezetékneved!",
+            szam_k_nev: "<br>Kérlek add meg a keresztneved!",
+            szam_email: {
+                required: "<br>Kérlek add meg az emailodat!",
+                email: "<br>Érvényest emailt adj meg!"
+            },
+            szam_cim: "<br>Kérlek add meg a számlázási címet!",
+            szam_ir: "<br>Kérlek add meg az írányító számod!",
+            feltetelek: "<br>El kell fogadnia a szerződési feltételeket!",
+            vez_nev: "<br>Kérlek add meg a vezetékneved!",
+            k_nev: "<br>Kérlek add meg a keresztneved!",
+            utazok:{
+                required: "<br>Kérlek add meg hányan utaztok!",
+                min: "<br>Kérlek 0-nál nagyobb számot adj meg!",
+                max: "<br>Kérlek kissebb számot adj meg 6-nál"
+            },
+            eletkor:{
+                required: "<br>Kérlek add meg az életkorodat!",
+                min: "<br>A minimum életkor 18!"
+            },
+            email:{
+                required: "<br>Kérlek add meg az emailodat!",
+                email: "<br>Érvényest emailt adj meg!"
+            },
+            csomag: "<br>Kérlek vállasz ki egy csomagot!",
+            indulas_d: "Kérlek válassz ki egy dátumot!",
+            vissza_d: "<br>Kérlek válassz ki egy dátumot!",
+            ejgy: "<br>Kérlek válassz egy címet!",
+            kuponkod:{
+                minlength: "<br>Helytelen kuponkód formátum!"
+            }
+        },
+    });
+    });
+</script>
+<style>
+    label.error {color: #FB3A3A;}
+</style>
+</head>
+<body>
+<header class="fej_con">
+<a href="index.html">
+<div class="keret">
+    <img src="kepek/szabsz.jpg" alt="Szabadságszobor">
+    <h1 class="fej_h1">New York</h1>
+</div>
+</a>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="Tortenelem.html">Történelem</a></li>
+        <li><a href="GY_I_K.html">GY.I.K.</a></li>
+        <li><a href="#" id="current">Shop</a></li>
+    </ul>
+</nav>
+<hr>
+<article class="shop">
+    <h3 class="kivetel">Válasszon meglévő csomagjaink közül és adja le rendelését mihamarabb!</h3>
+    <section>
+        <form action="http://szamtud.uni-corvinus.hu/receive.php" method="get" id="MyForm" novalidate>
+            <h4 class="kivetel">Számlázási adatok:</h4>
+            <div id="elerhet">
+                <p><label>Vezetéknév: <input type="text" name="szam_vez_nev" placeholder="Kovács"></label></p>
+                <p><label>Keresztnév: <input type="text" name="szam_k_nev" placeholder="Béla"></label></p>
+                <p><label>E-mail: <input type="email" name="szam_email" placeholder="kis.bela@alma.hu"></label></p>
+                <p><label>Számlázási cím: <input class="hossz_n" type="text" name="szam_cim" placeholder="Pl.: Budapest Jászai Mari tér, 32."></label></p>
+                <p><label>Irányító szám: <input class="hossz_k" type="text" name="szam_ir" id="ir_szam_v" placeholder="2765"></label></p>
+                <p><label>Elfogadja a szerződési feltételeket? <input type="checkbox"         name="feltetelek" value="igen"></label></p>
+            </div>
+            <h4 class="kivetel">Csomagok kiválasztása:</h4>
+            <div id="rendeles">
+                <p><label>Megrendelő vezetékneve: <input type="text" name="vez_nev" placeholder="Kovács"></label></p>
+                <p><label>Megrendelő keresztneve: <input type="text" name="k_nev" placeholder="Béla"></label></p>
+                <p><label>Utazók száma: <input type="number" name="utazok" id="utazok_sz" min="1" value="1" max="5" ></label></p>
+                <p><label>Életkor: <input class="hossz_k" type="number" name="eletkor" id="eletkor_sz"></label></p>
+                <p><label>E-mail: <input type="email" name="email" placeholder="kis.bela@alma.hu"></label></p>
+                <div id="csomagok">
+                    <div>
+                        <section class="cs_keret">
+                            <h4 class="kivetel">A teljeskörű szolgáltatás</h4>
+                            <p>A csomaghoz a következő tartozik: minden biztosítás megkötése, 5 csillagos hotel, a legkíválóbb éttermek, illetve egy ingyen póló.</p>
+                        </section>
+                        <p class="cs_p"><label>személyenként:<br>300000 Ft<br><input type="radio" name="csomag" value="elso"></label></p>
+                    </div>
+                    <div>
+                        <section class="cs_keret">
+                            <h4 class="kivetel">Részleges szolgáltatás</h4>
+                            <p>A csomaghoz a következő tartozik: csak az ajánlott biztosítások megkötése, 4 csillagos hotel, a jó éttermek, illetve egy ingyen zokni.</p>
+                        </section>
+                        <p class="cs_p"><label>személyenként:<br>250000 Ft<br><input type="radio" name="csomag" value="masodik"></label></p>
+                    </div>
+                    <div>
+                        <section class="cs_keret">
+                            <h4 class="kivetel">Felszínes szolgáltatás</h4>
+                            <p>A csomaghoz a következő tartozik: csak egy biztosítás köthető, 3 csillagos hotel, jó értékúrú éttermek, egy ingyen kulcstartó.</p>
+                        </section>
+                        <p class="cs_p"><label>személyenként:<br>200000 Ft<br><input type="radio" name="csomag" value="harmadik"></label></p>
+                    </div>
+                </div>
+                <p><label>Az utazás időtartama:<br><input type="date" name="indulas_d" id="indulas_datuma">-tól</label> - <input type="date" name="vissza_d" id="vissza_datuma">-ig</p>
+                <p><label>Válassza ki milyen színben szeretné megkapni a jegyét/jegyeit:<br><input type="color" name="ejgy"></label></p>
+                <p><label>Kuponkód:<br><input type="password" name="kuponkod"></label></p>
+                <p><label>Megjegyzés:<br><textarea name="megjegyzes" cols="35" rows="3" placeholder="Ha bármi kérdése vagy megjegyzése lenne:"></textarea></label></p>    
+            </div>
+            <div id="leadas">
+                <input type="text" id="osszeg"><input type="button" value="Végösszeg" onClick="szamol()">
+                <br>
+                <input type="submit" value="Rendelés leadása">
+                <input type="reset" value="Alaphelyzet">
+            </div>
+        </form>
+    </section>
+</article>
+<hr>
+<footer>
+    <p>Nem egy valós utazási iroda. Az oldal tanulmányi célú</p>
+    <p>Deskó Zoltán © 2023 Corvinus</p>
+</footer>
+<script src="JS/shop_script.js"></script>
+</body>
+</HTML>
