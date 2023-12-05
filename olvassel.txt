@@ -1,5 +1,5 @@
 Oldal készítőjének neve: Deskó Zoltán;
-URL: 
+URL: https://j6n0s.github.io/webfejlesztes/
 
 A weboldal egy fiktív utazási irodát reprezentál, amelynek a neve New York utazási iroda. Az iroda utazásokat és élményprogramokat kínál, New York városában. 
 
